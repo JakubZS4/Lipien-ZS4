@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="pole"/>
+        <button type="submit">Pokaż</button>
+    </form>
+    <div class="wynik"></div>
+
+
+    <script>
+        const a = prompt('podaj pierwsza liczbe')
+        const b = prompt('podaj ostatnia liczbe')
+
+         //odwołujemy się do formularza
+         const formularz = document.querySelector('form');
+
+        //odwołujemy sie do diva o klasie wynik
+        const wynik = document.querySelector('.wynik');
+
+        //przypisujemy zdarzenie do naszego formularza, które uruchowi funkcję przez przeglądarkę to zdarzenie nazywa się submit
+        formularz.addEventListener('submit', (even) => {
+        even.preventDefault();
+        // zatrzymujemy domyślną akcję przeglądarki
+
+         //odwołujemy się do pola w formularzu i pobieramy jego wartość
+         const wartoscPolaFormularza = document.querySelector('input[name = "pole"]').value;
+
+
+        if (wartoscPolaFormularza > a && wartoscPolaFormularza < b){
+           wynik.textContent = 'Liczba znajduje sie w przedziale';
+        }
+
+        else {
+            wynik.textContent = 'Liczba nie znajduje sie w przedziale';
+        }
+    });
+    </script>
+    
+</body>
+</html>
