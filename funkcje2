@@ -28,7 +28,7 @@
             const l1 = document.querySelector('input[name="liczba1"]').value*1;
             const l2 = document.querySelector('input[name="liczba2"]').value*1;
 
-            div.textContent = (l1, l2);
+            div.textContent = suma(l1, l2);
 
 
         });
