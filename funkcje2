@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funkcje</title>
+    
+</head>
+<body>
+   
+    <form action="" method= "post">
+        <input type="number" name= "liczba1" />
+        <input type="number" name= "liczba2" />
+        <input type="submit" value= "Sumuj" />
+    </form>
+    <div class="wynik"></div>
+
+    <script>
+        const formularz = document.querySelector('form');
+        const div = document.querySelector('form');
+        const suma = function(lb1, lb2){
+            return `Suma liczb ${lb1} i ${lb2} wynosi: ${lb1 + lb2}`;
+        };
+
+        formularz.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            const l1 = document.querySelector('input[name="liczba1"]').value*1;
+            const l2 = document.querySelector('input[name="liczba2"]').value*1;
+
+            
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+   //  function suma(liczba1, liczba2) {
+     //   const wynik = liczba1 + liczba2;
+     //   document.write('Suma liczb wynosi: ' +wynik);
+
+    // }
+    //    suma(10,20);
+    </script>
+
+
+
+
+
+
+</body>
+</html>
