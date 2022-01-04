@@ -8,6 +8,10 @@
     
 </head>
 <body>
+	<input type="text" name="imieUzytkownika" />
+	<button>Sprawdz imie</button>
+	<div class="wynik"></div>
+
     <script>
     
 	const sprawdzImie = function (imie) {
@@ -24,8 +28,15 @@
 		
 	};
  	
- document.write(sprawdzImie('ANIA'));
 
+	const btn = document.querySelector('button');
+	const divW = document.querySelector('div.wynik');
+	
+	btn.addEventListener('click', ()=>{
+		const i = document.querySelector('input[name="imieUzytkownika"]').value;
+		
+		divW.textContent = sprawdzImie(i);
+	});
 	</script>
 </body>
 </html>
