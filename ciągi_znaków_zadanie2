@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+	<form action="" method="POST">
+        <input type="text" id="wyraz" placeholder="podaj wyraz">
+        <input type="submit" value="potwierdź">
+    </form>
+
+	<div id="wynik"></div>
+    
+    
+
+		<script>
+			const funkcja = function(wyraz){
+				const dlugosc = wyraz.length;
+                 let i = 0;
+                 let litera;
+                 let ilosc = 0;
+                    while(i<dlugosc){
+                        litera = wyraz.charAt(i);
+                        if (litera=='a'){
+                            ilosc++;
+                        }
+                        else if (litera=='o'){
+                            ilosc++;
+                        }
+                        else if (litera=='i'){
+                            ilosc++;
+                        }
+                        else if (litera=='u'){
+                            ilosc++;
+                        }
+                        else if (litera=='ó'){
+                            ilosc++;
+                        }
+                        else if (litera=='y'){
+                            ilosc++;
+                        }
+                        else if (litera=='e'){
+                            ilosc++;
+                        }
+                        i++;
+                    }
+                    return ilosc;
+                }    
+
+                
+                    
+				const formularz = document.querySelector('form');
+                const div = document.querySelector('div');
+                
+                formularz.addEventListener('submit', (e)=>{
+                    e.preventDefault();
+                const słowo = document.querySelector('input[id="wyraz"]').value;
+
+                div.textContent = funkcja(słowo);
+
+                
+
+
+			});
+			
+
+
+		</script>
+	</body>
+</html>
