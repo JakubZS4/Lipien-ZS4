@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DOM</title>
+</head>
+<body>
+
+    <style>
+
+        .naglowek {
+            color: orange;
+            font-family: Arial;
+        }
+
+        .blok {
+            background-color: blue;
+            color: yellow;
+
+        }
+
+        .p1 {
+            font-size: 30px;
+
+        }
+
+        .p2 {
+
+            color: cadetblue;
+        }
+
+        .zmiana {
+            font-size: 50px;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+    </style>
+
+
+    <h1 class="naglowek"> To jest nagłówek h1</h1>
+    <div class="blok"> To jest div</div>
+    <p class="p1">To jest akapit 1</p>
+    <p class="p2">To jest akapit 2</p>
+
+    <script>
+        //pobieramy elementy html
+        const naglowekH1 = document.querySelector('h1.naglowek');
+
+        const diw = document.querySelector('div.blok');
+
+        const akapity = document.querySelectorAll('p');
+
+        //dodajemy treść do akapitu p1
+        akapity[0].innerHTML += ' <b> Bardzo lubię Rysie :)<b>';
+
+        //zmieniamy zawartość nagłówka h1
+        naglowekH1.textContent = 'JavaScript';
+
+        //zmieniamy krój czcionki divowi
+        diw.style.fontFamily = 'Courier New';
+
+        //zmieńmy divowi więcej styli dodając klasę o nazwie 'zmiana'
+        diw.classList.add('zmiana');
+
+        //tworzymy nowy element h2
+        const nowyH2 = document.createElement('h2');
+
+        //do nowego elementu dodajemy treść
+        nowyH2.textContent = 'Aplikacje internetowe';
+
+        //dodajemy nowy element do akapitu 2
+        akapity[1].appendChild(nowyH2);
+
+        //usuwamy nagłówek h1
+        naglowekH1.remove();
+
+    </script>
+
+
+
+
+	
+</body>
+</html>
