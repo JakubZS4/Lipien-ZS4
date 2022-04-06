@@ -24,3 +24,28 @@ li:nth-child(){
     color: chocolate;
 
 }
+
+li {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+}
+
+div.img {
+    width: 400px;
+    height: 300px;
+
+}
+/*
+img {
+    width: 400px;
+    height: 300px;
+
+}
+*/
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
