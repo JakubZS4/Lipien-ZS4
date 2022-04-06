@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    background-color: red;
+}
+
+p {
+    background-color: yellow;
+}
+
+p.akapit1 {
+    font-size: 30px;
+    padding: 20px;
+}
+
+p.akapi2 {
+    color: blue;
+}
+
+li:nth-child(){
+    color: chocolate;
+
+}
