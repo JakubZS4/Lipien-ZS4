@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action = "">
+    
+    <input type="number" placeholder="liczba1" class="1">
+    <input type="number" placeholder="liczba2" class="2">
+    <input type="submit">
+
+</form>
+
+        <script>  
+            const formularz = document.querySelector('form');
+
+            formularz.addEventListener('submit', e =>{
+            e.preventDefault();
+
+            const a = document.querySelector('input[placeholder="liczba1"]').value*1;
+            const b = document.querySelector('input[placeholder="liczba2"]').value*1;
+
+            if(a>b){
+            document.write(b +" , " +a);
+            }
+
+            else if(a<b){
+            document.write(a +" , " +b);
+            }
+
+            else document.write(a +" , " +b);
+
+});
+
+
+        </script>
+    </body>
+</html>
