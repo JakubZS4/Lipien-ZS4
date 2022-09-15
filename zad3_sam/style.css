@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu {
+    background-color: lightblue;
+    height: 30px;
+  
+}
+
+.header {
+    background-color: palevioletred;
+    height: 200px;
+}
+
+.content1 {
+    background-color: darkolivegreen;
+    height: 200px;
+}
+
+.content2 {
+    background-color: plum;
+    height: 200px;
+}
+
+.content3 {
+    background-color: yellow;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer {
+    background-color: purple;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+}
