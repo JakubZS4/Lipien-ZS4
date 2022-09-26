@@ -117,6 +117,10 @@ return EXIT_SUCCESS;
 /////////////////////////////////////////////////////////////////////////////////////// LINK"
 https://www.forumpc.pl/topic/267488-zadanie-w-c-klasy/
 
+https://forum.pclab.pl/topic/257506-c-wyszukiwanie-rezerwacja-odwo%C5%82ywanie-rezerwacji/
+
+http://marek.piasecki.staff.iiar.pwr.wroc.pl/dydaktyka/skp/W09_przyklady_tablice_struktur.html
+
 
 
 
