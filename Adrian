@@ -1,0 +1,99 @@
+#include "Gosc.h"
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+#include <ctime>
+using namespace std;
+Gosc::Gosc()
+{
+}
+Gosc::sprawdzWiek(){
+time_t now = time(0);
+tm *ltm = localtime(&now);
+int wiek = (1900 + ltm->tm_year) - this->dataUr;
+if(wiek < 18){
+
+}else{
+
+}
+}
+int Gosc::obliczCene(){
+return this->dlugoscPob*140;
+
+}
+
+Gosc::przydzielPokoj(){
+    srand(time(NULL));
+    this->pokoj= rand() % 100 +1;
+}
+
+Gosc::pokazGoscia(){
+    cout << this->imie << " " << this->nazwisko << endl;
+    cout << "Numer pokoju: " << this->pokoj << endl;
+    cout << "Dlugosc pobytu: " << this->dlugoscPob << " dni.";
+    cout << "Koszt pobytu: " << obliczCene() << " PLN";
+}
+
+Gosc::zapiszGoscia(){
+cout << "--- Rezerwacja ---" << endl;
+cout << "Podaj imie: ";
+cin >> this->imie;
+cout << endl;
+cout << "Podaj nazwisko: ";
+cin >> this->nazwisko;
+cout << endl;
+cout << "Data urodzenia: ";
+cin >> this->dataUr;
+cout << endl;
+cout << "Miejsce zamieszkania: ";
+cin >> this->miejsceZam;
+cout << endl;
+cout << "Dlugosc pobytu w dniach: ";
+cin >> this->dlugoscPob;
+cout << endl;
+}
+
+
+
+
+
+#include <iostream>
+#include "Gosc.h"
+using namespace std;
+
+int main()
+{
+Gosc gosc1;
+gosc1.zapiszGoscia();
+//gosc1.sprawdzWiek();
+gosc1.przydzielPokoj();
+gosc1.pokazGoscia();
+}
+
+
+
+
+#ifndef GOSC_H
+#define GOSC_H
+#include <iostream>
+using namespace std;
+class Gosc
+{
+    private:
+        string imie;
+        string nazwisko;
+        int dataUr;
+        string miejsceZam;
+        int dlugoscPob;
+        int pokoj;
+    public:
+        Gosc();
+        zapiszGoscia();
+        przydzielPokoj();
+        pokazGoscia();
+        int obliczCene();
+        sprawdzWiek();
+};
+
+#endif // GOSC_H
+
