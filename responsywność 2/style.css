@@ -1,0 +1,99 @@
+body {
+    background-color: pink;
+    padding: 0 10px;
+}
+
+h2 {
+    color:  white;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+p{
+    color: yellow;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    
+    body {
+        background-color: blue;
+       
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+
+}
+
+@media (max-width: 699px) {
+    
+    body {
+        background-color: yellow;
+       
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@media (min-width: 700px) {
+    body {
+        background-color: black;
+        padding: 10px 50px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+   
+    h2 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+
+}
+
+
