@@ -1,0 +1,96 @@
+/*
+.div1 {
+    background-color: yellow;
+
+}
+
+.div2 {
+    background-color: green;
+    
+}
+
+.div3 {
+    background-color: blue;
+    
+}
+
+.div4 {
+    background-color: red;
+    
+}
+
+.div5 {
+    background-color: orange;
+    
+}
+
+
+/*
+ <div>Ekran ma do 339px i kolor tła żółty</div>
+     <div>Ekran ma między 340px a 577px i kolor tła zielony</div>
+     <div>Ekran ma od 578px do 1023px i kolor tła niebieski</div>
+     <div>Ekran ma od 1024px do 1199px i kolor tła czerwony</div>
+     <div>Ekran ma co najmniej 1200px i kolor tła pomarańczowy</div>
+
+     Wielkość czcionki zwiększaj 1.5 raza na każdym kolejnym widoku. Zacznij od 16px. Użyj jednostek względnych (em, rem).
+*/
+
+@media (min-width: 339px) {
+    
+    body {
+        background-color: yellow;
+    }
+
+    div {
+        font-size: 16px;
+    }
+
+}
+
+@media (min-width: 340px) {
+   
+    body {
+        background-color: green;
+    }
+
+    div {
+        font-size: 17.5px;
+    }
+
+}
+
+@media (min-width: 578px) {
+   
+    body {
+        background-color: blue;
+    }
+
+    div {
+        font-size: 19px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+   
+    body {
+        background-color: red;
+    }
+
+    div {
+        font-size: 20.05px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+   
+    body {
+        background-color: orange;
+    }
+
+    div {
+        font-size: 22px;
+    }
+
+}
