@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <script>
+    <script>  /*Tablica - wypisane zostają liczby parzyste*/
         
         const tab = [];
 
