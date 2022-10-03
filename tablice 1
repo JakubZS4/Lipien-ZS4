@@ -8,7 +8,7 @@
     
 </head>
 <body>
-    <script>
+    <script>                 /*Tablica 10 elementowa*/
     let tablica = [];
  	
  		for (let i = 0; i < 10; i++){
