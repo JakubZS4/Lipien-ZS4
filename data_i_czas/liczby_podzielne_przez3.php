@@ -9,8 +9,8 @@
 
 <body>
 
-    <?php
-        $liczby = array();
+    <?php                                   
+        $liczby = array();             /* Liczby randomowe i wypisanie ilości tych podzielnych przez 3 */
 
         for($i = 0; $i < 100; $i++)
         {
@@ -31,7 +31,7 @@
             }
         }
 
-        echo '<h4>Ilość liczb podzielnych hprzez trzy: ' .$ile . '</h4>';
+        echo '<h4>Ilość liczb podzielnych przez trzy: ' .$ile . '</h4>';
     ?>
 
 
