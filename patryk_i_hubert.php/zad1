@@ -21,7 +21,7 @@
     
     <?php
 
-    //Napisz program wczytujący do tablicy 10 liczb i wyświetlający te liczby od najmniejszej do największej.
+    // Napisz program wczytujący do tablicy 10 liczb i wyświetlający te liczby od najmniejszej do największej.
 /*
     for($i=0; $i<10;$i++){
         $tablica = array($i);
