@@ -9,7 +9,7 @@
 
 <body>
 
-    <?php
+    <?php                           /* Wyświetla nam randomowe 100 liczb pd 1 do 50 */
         $liczby = array();
 
         for($i = 0; $i < 100; $i++)
