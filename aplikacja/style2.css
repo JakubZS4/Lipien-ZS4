@@ -1,0 +1,38 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aquamarine;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.obrazek {
+    display: flex;
+    justify-content: center;
+}
+
+.logowanie {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    transform: scale(2,2);
+}
+
+
+
+
+
+
+
+
