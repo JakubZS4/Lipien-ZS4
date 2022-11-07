@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 3</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+
+.menu{
+    background-color: mediumturquoise;
+    width: 70%;
+    height: 100px;
+    justify-content: flex-start;
+}
+
+.menu2{
+    background-color: mediumturquoise;
+    width: 70%;
+    height: 100px;
+    justify-content: flex-start;
+}
+
+
+.header{
+    background-color: green;
+    width: 100%;
+    height: 100px;
+    justify-content: flex-end ;
+}
+
+.content1{
+    background-color: red;
+    height: 150px;
+    width: 25%;
+}
+
+.content2{
+    background-color: palevioletred;
+    height: 150px;
+    width: 50%;
+}
+
+.content3{
+    background-color: blue;
+    height: 150px;
+    width: 25%;
+}
+
+.div1 {
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content4{
+    background-color:grey;
+    height: 150px;
+    width: 50%;
+}
+
+.content5{
+    background-color:black;
+    height: 150px;
+    width: 50%;
+}
+
+.div2 {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.content6{
+    background-color: pink;
+    height: 150px;
+    width: 50%;
+}
+
+.content7{
+    background-color:greenyellow;
+    height: 150px;
+    width: 50%;
+}
+
+.content8{
+    background-color: blueviolet;
+    height: 150px;
+    width: 50%;
+}
+
+.content9{
+    background-color: burlywood;
+    height: 150px;
+    width: 50%;
+}
+
+.div3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div>
+    <div class="menu"> </div>
+    <div class="menu2"> </div>
+    </div>
+    <div class="header"></div>  
+    
+    <div class="div1">
+        <section class="content1"></section>
+        <section class="content2"></section>  
+        <section class="content3"></section>  
+    </div>
+
+    <div class="div2">
+        <section class="content4"></section>
+        <section class="content5"></section>  
+    </div>
+
+    <div class="div3">
+        <section class="content6"></section>
+        <section class="content7"></section>  
+        <section class="content8"></section>
+        <section class="content9"></section>  
+    </div>
+
+
+
+    
+</body>
+</html>
