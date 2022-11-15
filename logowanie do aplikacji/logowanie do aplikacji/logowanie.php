@@ -55,8 +55,9 @@
         $wynik = $polaczenie->query($zapytanie);
         $rekord = $wynik->fetch_assoc();
 
-        if($rekord['haslo'] == $haslo)
+        if(password_verify($haslo, $rekord['haslo']))
         {
+            //gdy haslojest prawidlowe zalogujemy się
             $_SESSION['user'] = $login;
             header('Location: serwis.php');  
 

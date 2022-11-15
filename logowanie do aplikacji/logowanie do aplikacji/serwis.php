@@ -30,6 +30,22 @@
         </span>
     </p>
     <p><a href="wyloguj.php"> Wyloguj się </a></p>
+
+        <h3>Wybierz operację do wykonania: </h3>
+
+        <form acton="" method="POST">
+            <input type="submit" value="Pokaż użytkowników" name="pokaz">
+        </form>
+
+        <?php
+    if(isset($_POST['pokaz']))
+                {
+                    require_once('funkcje.php');
+                    //jeśli klikniemy przycisk wywoła nam się funkcja wyświetlająca użytkowników
+                    show_users(); 
+                }
+        ?>
+
 </body>
 
 </html>
