@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <section class="blok-lewy">
+    <h2>Konfigurator stylu</h2>
+    <p>Podaj kolor tła</p>
+    <button>Indigo</button>
+    <button>SteelBlue</button>
+    <button>Olive</button>
+    <p>Podaj kolor czcionka</p>
+    <select name="kolor">
+        <option value="White">White</option>
+        <option value="Tan">Tan</option>
+        <option value="Bisque">Bisque</option>
+        <option value="Plum">Plum</option>
+    </select>
+    <p>podaj rozmiar czcionki w %</p>
+        <input type="text" name="wielkoscCzcionki" value="100%"/>
+        <p>Czy rysunek ma mieć ramkę</p>
+        <input type="checkbox" name="ramka" checked />Rysuj ramkę
+        <p>Jaki jest typ punktora listy?</p>
+        <input type="radio" name="punktor" value="disc"/>dysk
+        <input type="radio" name="punktor" value="square"/>kwadrat
+        <input type="radio" name="punktor" value="circle"/>okrąg
+    </section>
+    <section class="blok-prawy">
+        <div>
+        <img src="gibraltar.jpg" alt="">
+            <ul>
+                <li>element1</li>
+                <li>element2</li>
+                <li>element3</li>
+            </ul>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro incidunt animi quibusdam consequatur ?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro incidunt animi quibusdam consequatur ?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro incidunt animi quibusdam consequatur ?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro incidunt animi quibusdam consequatur ?
+        </p>
+    </section>
+
+    <script>
+        const blokPrawy = document.querySelector('.blok-prawy');
+        const obrazek = document.querySelector('.blok-prawy img');
+        const lista = document.querySelector('.blok-prawy ul');
+        const akapit = document.querySelector('.blok-prawy p');
+
+        const przyciski = document.querySelectorAll('button');
+        przyciski[0].addEventListener('click', () =>{
+            blokPrawy.style.backgroundColor = 'indigo';
+         });
+         przyciski[1].addEventListener('click', () =>{
+            blokPrawy.style.backgroundColor = 'SteelBlue';
+         });
+         przyciski[2].addEventListener('click', () =>{
+            blokPrawy.style.backgroundColor = 'Olive';
+         });
+
+         const selekt = document.querySelector('select');
+         selekt.addEventListener('change', function(){
+            blokPrawy.style.color = selekt.value;
+         });
+
+         const wielkoscCzcionki = document.querySelector('input [name="wielkoscCzcionki"]');
+         wielkoscCzcionki.addEventListener('focusout', function() {
+            blokPrawy.style.fontSize = wielkoscCzcionki.value;
+         });
+
+         const czyRamka = function(el){
+            if(el.checked) obrazek.style.border = '2px solid black';
+            else obrazek.style.border = 'none';
+         };
+         const ramka = document.querySelector('input[name="ramka"]');
+         czyRamka(ramka);
+         ramka.addEventListener('click', () => {
+            czyRamka(ramka);
+         });
+    </script>
+    
+    
+</body>
+</html>

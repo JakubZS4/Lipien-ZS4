@@ -1,0 +1,21 @@
+body {
+    display: flex;
+}
+
+.blok-lewy {
+    width: 40%;
+}
+
+.blok-prawy {
+    width: 50%;
+    padding: 20px;
+}
+
+.blok-prawy > div {
+    display: flex;
+}
+
+.blok-prawy img {
+    padding: 10px;
+}
+
