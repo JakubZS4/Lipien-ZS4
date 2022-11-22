@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krt - Jakub Lipień</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <input type="text" name="stanowisko">
+        <input type="submit">
+    </form>
+
+    <?php
+        $server = "localhost";
+        $user = "root";
+        $pass = '';
+        $database = 'krt1';
+
+        mysqli_report(MYSQLI_REPORT_STRICT);
+        $polaczenie = new mysqli($server, $user, $pass, $database);
+        $stanowisko = @$_POST['stanowisko'];
+        $zapytanie = "SELECT imie, nazwisko, stanowisko FROM pracownicy WHERE stanowisko = '$stanowisko'";
+        $wynik = $polaczenie->query($zapytanie);
+
+        while($result = $wynik->fetch_assoc()){
+            foreach($result = wynik->fetch_assoc()){
+                echo $rekord . " ";
+            }
+            echo "<br>";
+        }
+    ?>
+    
+</body>
+</html>
