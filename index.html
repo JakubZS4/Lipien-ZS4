@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egzamin wiosna 2022</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>Produkt</th>
+            <th>Jednostka</th>
+            <th>Dostępna ilość</th>
+            <th>Aktualizacja</th>
+            <th>Zamówienie</th>
+        </tr>
+        <tr>
+            <td>Skrętka drut</td>
+            <td>metr</td>
+            <td class="braki">0</td>
+            <td><button onclick="aktualizuj(0);">Aktualizuj</button></td>
+            <td><button>Zamów</button></td>
+        </tr>
+        <tr>
+            <td>Skrętka linka</td>
+            <td>metr</td>
+            <td class="braki">2</td>
+            <td><button onclick="aktualizuj(1);">Aktualizuj</button></td>
+            <td><button>Zamów</button></td>
+        </tr>
+        <tr>
+            <td>Wtyki 8P8C</td>
+            <td>sztuki</td>
+            <td class="braki">10</td>
+            <td><button onclick="aktualizuj(2);">Aktualizuj</button></td>
+            <td><button>Zamów</button></td>
+        </tr>
+        <tr>
+            <td>Moduły Keystone</td>
+            <td>sztuki</td>
+            <td class="braki">30</td>
+            <td><button onclick="aktualizuj(3);">Aktualizuj</button></td>
+            <td><button>Zamów</button></td>
+        </tr>
+    </table>
+
+    <script>
+        let idZamowienia = 0;
+        const dostepnaIlosc = document.querySelectorAll('td.braki');
+
+        const sprzawdzBraki = function () {
+            dostepnaIlosc.forEach(element=>{
+                const wartosc = element.innerHTML;
+
+                if(wartosc == '0'){
+                    element.style.backgroundColor = 'red';
+                }
+                else if(wartosc >=1 && wartosc <=5){
+                    element.style.backgroundColor = 'yellow';
+                } else {
+                    element.style.backgroundColor = 'honeydew';
+                }
+            });
+        };
+
+        sprzawdzBraki();
+
+        const aktualizuj = function(numer){
+            const nowaIlosc = prompt('Podaj nową ilość');
+
+            dostepnaIlosc[numer].innerHTML = nowaIlosc;
+
+            sprawdzBraki()
+        }
+
+    </script>
+    
+</body>
+</html>
