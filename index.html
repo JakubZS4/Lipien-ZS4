@@ -17,38 +17,39 @@
             <th>Zamówienie</th>
         </tr>
         <tr>
-            <td>Skrętka drut</td>
+            <td class="nazwa">Skrętka drut</td>
             <td>metr</td>
             <td class="braki">0</td>
             <td><button onclick="aktualizuj(0);">Aktualizuj</button></td>
-            <td><button>Zamów</button></td>
+            <td><button onclick="zamowienie(0);">Zamów</button></td>
         </tr>
         <tr>
-            <td>Skrętka linka</td>
+            <td class="nazwa">Skrętka linka</td>
             <td>metr</td>
             <td class="braki">2</td>
             <td><button onclick="aktualizuj(1);">Aktualizuj</button></td>
-            <td><button>Zamów</button></td>
+            <td><button onclick="zamowienie(1);">Zamów</button></td>
         </tr>
         <tr>
-            <td>Wtyki 8P8C</td>
+            <td class="nazwa">Wtyki 8P8C</td>
             <td>sztuki</td>
             <td class="braki">10</td>
             <td><button onclick="aktualizuj(2);">Aktualizuj</button></td>
-            <td><button>Zamów</button></td>
+            <td><button onclick="zamowienie(2);">Zamów</button></td>
         </tr>
         <tr>
-            <td>Moduły Keystone</td>
+            <td class="nazwa">Moduły Keystone</td>
             <td>sztuki</td>
             <td class="braki">30</td>
             <td><button onclick="aktualizuj(3);">Aktualizuj</button></td>
-            <td><button>Zamów</button></td>
+            <td><button onclick="zamowienie(3);">Zamów</button></td>
         </tr>
     </table>
 
     <script>
         let idZamowienia = 0;
         const dostepnaIlosc = document.querySelectorAll('td.braki');
+        const nazwaProduktu = document.querySelectorAll('td.nazwa');
 
         const sprzawdzBraki = function () {
             dostepnaIlosc.forEach(element=>{
@@ -73,7 +74,13 @@
             dostepnaIlosc[numer].innerHTML = nowaIlosc;
 
             sprawdzBraki()
-        }
+        };
+
+        const zamowienie = function(numer){
+            idZamowienia++;
+            alert(`Zamówienie numer: ${idZamowienia} Produkt: ${nazwaProduktu[numer].innerHTML}`);
+        };
+
 
     </script>
     
