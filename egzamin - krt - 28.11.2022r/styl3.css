@@ -6,12 +6,17 @@ body {
     font-family: Verdana, sans-serif;
 }
 
+header {
+    display: flex;
+    
+}
+
 .baner-lewy {
     background-color: #29434E;
     color: white;
     text-align: center;
     height: 70px; 
-    width: 100%;
+    width: 70%;
 }
 
 .baner-prawy {
@@ -42,3 +47,9 @@ p {
     background-color: #B0BEC5;
     height: 320px;
 }
+
+.stopka {
+    background-color: #29434E;
+    color: white;
+}
+
