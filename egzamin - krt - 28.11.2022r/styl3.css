@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.baner-lewy {
+    background-color: #29434E;
+    color: white;
+    text-align: center;
+    height: 70px; 
+    width: 100%;
+}
+
+.baner-prawy {
+    background-color:#29434E;
+    color: white;
+    width: 30%;
+    height: 70px;
+}
+
+.Polecamy {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+p {
+    text-align: center;
+}
+
+.Filmyfantastyczne {
+    background-color: #B0BEC5;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.Polecamy {
+    background-color: #B0BEC5;
+    height: 320px;
+}
